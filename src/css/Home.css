@@ -1,0 +1,185 @@
+/* RESET */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100dvh;
+    font-family: 'New Gerbil', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Contenedor principal responsive */
+.agenda-container {
+    width: 100%;
+    max-width: 480px;
+    padding: 24px;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* Título */
+.agenda-titulo {
+    font-size: 35px;
+    text-align: left;
+    line-height: 110%;
+    margin-bottom: 24px;
+    border-bottom: 1px solid #0c0c0c;
+    padding-bottom: 10px;
+}
+
+/* Paso de formulario */
+.agenda-paso {
+    margin-bottom: 20px;
+}
+
+/* Etiquetas */
+.agenda-label {
+    font-size: 18px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* Servicios */
+.agenda-servicio {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+/* Alineacion de texto de servicios */
+.agenda-text {
+    text-align: left;
+}
+
+/* Botón activo */
+.btn-active {
+    color: #0F0F17;
+    border-radius: 8px;
+    border: 1px solid black;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: #ff5f2e;
+    cursor: pointer;
+    transition: border-color 0.25s;
+}
+
+/* Botón principal */
+.agenda-boton {
+    width: auto;
+    padding: 14px;
+    background-color: #ff5f2e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.agenda-boton:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Botones de hora */
+.agenda-horas {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(150px, 1fr));
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.hora-boton {
+    width: auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    background-color: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: black;
+
+}
+
+.hora-seleccionada {
+    background-color: #ff5f2e;
+    color: white;
+    border: none;
+}
+
+/* Mensaje */
+.agenda-mensaje {
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+    color: #2e8b57;
+}
+
+/* CONTENEDOR DEL CALENDARIO */
+.estilo-calendario {
+    background: #2e8b57;
+    border: 2px solid #ff69b4;
+    border-radius: 12px;
+}
+
+.estilo-calendario .react-datepicker__header {
+    text-align: center;
+    background-color: inherit;
+    padding: 8px 0;
+    position: relative;
+}
+
+/* MES ACTUAL */
+.estilo-calendario .react-datepicker__current-month {
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    color: #333;
+    font-family: 'New Gerbil', sans-serif;
+    margin-bottom: 10px;
+    text-align: left;
+    text-transform: capitalize;
+    padding-left: 10px;
+}
+
+/* FLECHAS */
+.estilo-calendario .react-datepicker__navigation {
+    top: 6px;
+}
+
+.estilo-calendario .react-datepicker__navigation--previous {
+    left: 180px;
+}
+
+
+/* Responsive tweaks */
+@media screen and (max-width: 480px) {
+    .agenda-container {
+        padding: 16px;
+        border-radius: 15px;
+        min-height: 50vh;
+        box-shadow: none;
+    }
+
+    .agenda-boton {
+        font-size: 15px;
+        padding: 12px;
+    }
+
+    .agenda-horas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
